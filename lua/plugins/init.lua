@@ -5,7 +5,14 @@ local plugins = {
    ["nvim-lua/plenary.nvim"] = { module = "plenary" },
    ["wbthomason/packer.nvim"] = {},
    ["NvChad/extensions"] = { module = { "telescope", "nvchad" } },
-
+   ["akinsho/toggleterm.nvim"] = {}, 
+   ["Pocco81/AutoSave.nvim"] = {},
+   ["sbdchd/neoformat"] = {},
+   ["glepnir/dashboard-nvim"] = {
+     -- config = function ()
+     --  require "configs.dashboard"
+     -- end,
+   },
    ["NvChad/base46"] = {
       config = function()
          local ok, base46 = pcall(require, "base46")

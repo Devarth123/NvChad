@@ -43,6 +43,27 @@ capabilities.textDocument.completion.completionItem = {
    },
 }
 
+lspconfig.rust_analyzer.setup {
+   on_attach = M.on_attach,
+   capabilities = capabilities,
+
+   settings = {
+      Rust = {
+         diagnostics = {
+            globals = { "vim" },
+         },
+         workspace = {
+            library = {
+               [vim.fn.expand "$VIMRUNTIME/lua"] = true,
+               [vim.fn.expand "$VIMRUNTIME/lua/vim/lsp"] = true,
+            },
+            maxPreload = 100000,
+            preloadFileSize = 10000,
+         },
+      },
+   },
+}
+
 lspconfig.sumneko_lua.setup {
    on_attach = M.on_attach,
    capabilities = capabilities,
