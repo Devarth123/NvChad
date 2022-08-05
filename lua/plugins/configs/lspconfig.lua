@@ -73,27 +73,6 @@ lspconfig.rust_analyzer.setup {
    },
 }
 
-lspconfig.sumneko_lua.setup {
-   on_attach = M.on_attach,
-   capabilities = capabilities,
-
-   settings = {
-      Lua = {
-         diagnostics = {
-            globals = { "vim" },
-         },
-         workspace = {
-            library = {
-               [vim.fn.expand "$VIMRUNTIME/lua"] = true,
-               [vim.fn.expand "$VIMRUNTIME/lua/vim/lsp"] = true,
-            },
-            maxPreload = 100000,
-            preloadFileSize = 10000,
-         },
-      },
-   },
-}
-
 -- requires a file containing user's lspconfigs
 local addlsp_confs = utils.load_config().plugins.options.lspconfig.setup_lspconf
 

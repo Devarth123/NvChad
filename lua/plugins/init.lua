@@ -9,6 +9,7 @@ local plugins = {
    ["Pocco81/AutoSave.nvim"] = {},
    ["sbdchd/neoformat"] = {},
    ["glepnir/dashboard-nvim"] = {
+   -- ["catppuccin/nvim"] = {}
      -- config = function ()
      --  require "configs.dashboard"
      -- end,

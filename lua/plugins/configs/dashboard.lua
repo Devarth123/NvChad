@@ -1,8 +1,8 @@
   local db = require('dashboard')
   db.preview_file_height = 12
   db.preview_file_width = 45
-  db.preview_command = 'cat'
-  db.preview_file_path = "~/aschii/hmm"
+  -- db.preview_command = 'cat'
+  -- db.preview_file_path = "~/aschii/hmm"
   db.custom_center = {
       {icon = '  ',
       desc = 'Recently opened files                   ',
